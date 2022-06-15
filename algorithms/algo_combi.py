@@ -82,9 +82,9 @@ def make_dist_list(attempt, switch_what):
             dist = manhattan_distance([hou.x, hou.y], [bat.x, bat.y])
             bat_dist.append([bat.id, bat, dist])
         dist_list.append([[hou.id, hou], sorted(
-                    bat_dist, key=key_bats, reverse=False)])
+                    bat_dist, key=key_bats, reverse=True)])
 
-    dist_list = sorted(dist_list, key=key_hous, reverse=False)
+    dist_list = sorted(dist_list, key=key_hous, reverse=True)
 
     # switch both batteries and houses
     if switch_what == 'both':

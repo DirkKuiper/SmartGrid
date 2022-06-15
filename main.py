@@ -27,8 +27,8 @@ NUMBER_BATTERIES = 5
 # 3) hou-bat combi is ordered close->far, switching houses&batteries (750 options)
 # see README.md for more extensive explanation
 config_switch_settings = [['random', '', 150],
-                          ['closest', 'only houses', NUMBER_HOUSES],
-                          ['closest', 'both', NUMBER_HOUSES * NUMBER_BATTERIES]]
+                          ['farthest', 'only houses', NUMBER_HOUSES],
+                          ['farthest', 'both', NUMBER_HOUSES * NUMBER_BATTERIES]]
 
 # load in the locations of the houses and batteries as provided
 def load_district(DISTRICT):
@@ -79,7 +79,7 @@ def make_configurations():
         print("Found {} configurations".format(len(configurations)))
         print("\n")
 
-    elif CONFIG == 'closest':
+    elif CONFIG == 'farthest':
 
         orders = []
         current_attempt = 0
